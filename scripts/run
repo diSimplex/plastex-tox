@@ -6,6 +6,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 plastexDir=$1
+mkdir -p toxDir
 
 reset
 
