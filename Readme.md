@@ -11,7 +11,7 @@ Besides the `Dockerfile` itself, we provide a collection of scripts
 designed to automate the build, running and removal of these PlasTeX Tox
 images.
 
-All of these scripts are meant to be run **in** the `plastex-tox` root
+All of these scripts are meant to be run *in* the `plastex-tox` root
 directory.
 
 1. `./scripts/build` uses the supplied `Dockerfile` to build the
@@ -20,10 +20,10 @@ directory.
 2. `./scripts/run` uses the `plastex-tox-testeri` image to run as a simple
    command line environment (using `/bin/bash`) sufficient to run `tox`.
 
-   This script requires **one** command line argument, the location of the
+   This script requires *one* command line argument, the location of the
    plastex code which needs to be tested.
 
-   This running container will **stop** when the `/bin/bash` instance is
+   This running container will *stop* when the `/bin/bash` instance is
    exited.
 
 3. `./scripts/enter` re-enters a running `plastex-tox-testerc` container
@@ -54,10 +54,10 @@ Podman](https://podman.io/docs/installation).
 For Podman's documentation see: [What is Podman? — Podman
 documentation](https://docs.podman.io/en/latest/).
 
-*NOTE* while Docker now has a rootless mode, I have no experience with
+**NOTE** while Docker now has a rootless mode, I have no experience with
 using Docker.
 
-*These tools SHOULD NOT be used with a rooted Podman/Docker instance!*
+**These tools SHOULD NOT be used with a rooted Podman/Docker instance!**
 
 ## Tox results
 
