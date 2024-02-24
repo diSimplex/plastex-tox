@@ -1,0 +1,14 @@
+#!/bin/bash
+
+reset
+
+echo "Building image in $(pwd)"
+echo "-----------"
+ls
+echo "-----------"
+
+if podman image exists plastex_tox_testeri ; then
+  podman image rm -f plastex_tox_testeri
+fi
+
+podman build -t plastex_tox_testeri .

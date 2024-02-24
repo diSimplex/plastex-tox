@@ -1,0 +1,7 @@
+#!/bin/bash
+
+reset
+
+echo "Removing container plastex_tox_testerc"
+
+podman container rm -f plastex_tox_testerc

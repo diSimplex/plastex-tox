@@ -1,0 +1,10 @@
+#!/bin/bash
+
+reset
+
+echo "Entering running plastex_tox_tester containter"
+echo ""
+echo tox --conf /plastex/tox.ini --workdir /toxDir
+echo ""
+
+podman exec -it plastex_tox_testerc /bin/bash

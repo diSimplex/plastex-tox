@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+  echo "Usage: run <<plasTeXSrcPath>>"
+  exit 1
+fi
+
+plastexDir=$1
+
+reset
+
+echo "Running image in plastex_tox_testeri using $plastexDir"
+echo ""
+echo "tox --conf /plastex/tox.ini --workdir /toxDir"
+echo ""
+if podman container exists plastex_tox_testerc ; then
+  echo "   ...removing old container...."
+  podman container rm -f plastex_tox_testerc
+fi
+
+podman run -it \
+ --volume ./toxDir:/toxDir \
+ --volume $plastexDir:/plastex \
+ --name=plastex_tox_testerc \
+ plastex_tox_testeri \
+ /bin/bash
+
+

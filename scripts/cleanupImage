@@ -1,0 +1,7 @@
+#!/bin/bash
+
+reset
+
+echo "Removing image plastex_tox_testeri"
+
+podman image rm -f plastex_tox_testeri
