@@ -31,7 +31,7 @@ RUN apt-get --yes install \
 RUN pip install tox
 
 # Install Pyenv in the /pyenv directory
-RUN git clone https://github.com/pyenv/pyenv.git && \
+RUN git clone https://github.com/pyenv/pyenv.git /pyenv && \
   cd /pyenv && src/configure && make -C src
 
 # Add Pyenv to the system path
