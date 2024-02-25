@@ -24,8 +24,9 @@ RUN apt-get update && \
 # Add some useful packages as well as the TeXLive environment
 # to provide any LaTeX tools PlasTex might want
 RUN apt-get --yes install \
-  less tree \
-  texlive
+  dvisvgm dvipng imagemagick inkscape pdf2svg poppler-utils \
+  texlive-binaries texlive-latex-base texlive-latex-extra \
+  texlive-extra-utils texlive-xetex texlive less tree
 
 # Install Tox
 RUN pip install tox
@@ -47,6 +48,8 @@ RUN pyenv install 3.6 && \
   pyenv install 3.11 && \
   pyenv install 3.12 && \
   pyenv global 3.7 3.8 3.9 3.10 3.11 3.12
+
+ENTRYPOINT [ "/bin/bash" ]
 
 # This is the typical Tox command used to run tox on the PlasTex sources
 #

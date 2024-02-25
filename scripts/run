@@ -12,7 +12,7 @@ reset
 
 echo "Running image in plastex_tox_testeri using $plastexDir"
 echo ""
-echo "tox --conf /plastex/tox.ini --workdir /toxDir"
+echo "tox -v -v --conf plastex/tox.ini --workdir toxDir"
 echo ""
 if podman container exists plastex_tox_testerc ; then
   echo "   ...removing old container...."
@@ -20,10 +20,7 @@ if podman container exists plastex_tox_testerc ; then
 fi
 
 podman run -it \
- --volume ./toxDir:/toxDir \
- --volume $plastexDir:/plastex \
+ --volume ./toxDir:/root/toxDir \
+ --volume $plastexDir:/root/plastex \
  --name=plastex_tox_testerc \
- plastex_tox_testeri \
- /bin/bash
-
-
+ plastex_tox_testeri

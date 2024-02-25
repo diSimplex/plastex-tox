@@ -30,13 +30,10 @@ directory.
    (created by the `./scripts/run` script) to provide another command line
    environment (using `/bin/bash`).
 
-4. `./scripts/restart` re-starts a stopped `plastex-tox-testerc`
-   container and provides a command line environment (using `/bin/bash`).
-
-5. `./scripts/cleanupContainer` removes any existing `plastex-tox-testerc`
+4. `./scripts/cleanupContainer` removes any existing `plastex-tox-testerc`
    container.
 
-6. `./scripts/cleanupImage` removes any existing `plastex-tox-testeri`
+5. `./scripts/cleanupImage` removes any existing `plastex-tox-testeri`
    image.
 
 These scripts *explicitly* require the [Podman](https://podman.io/) tools
