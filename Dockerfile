@@ -26,7 +26,7 @@ RUN apt-get update && \
 RUN apt-get --yes install \
   dvisvgm dvipng imagemagick inkscape pdf2svg poppler-utils \
   texlive-binaries texlive-latex-base texlive-latex-extra \
-  texlive-extra-utils texlive-xetex texlive less tree
+  texlive-extra-utils texlive-xetex texlive less tree nano
 
 # Install Tox
 RUN pip install tox
